@@ -1,0 +1,57 @@
+﻿@model CacheRedisASP.Models.Transaction
+@inject CacheRedisASP.Services.DataService MyDataService
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Transaction</h4>
+    <h3><p style="background-color: lightgreen;">@MyDataService.DisplayMsg()</p></h3>
+ 
+  <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.AccountNumber)
+        </dt>
+        <dd class="col-sm-10" style="background-color: lightyellow;border-color:lightgray; border-width:thin; border-style:solid">
+            @Html.DisplayFor(model => model.AccountNumber)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.BanificiaryName)
+        </dt>
+        <dd class="col-sm-10" style="border-color:lightgray; border-width:thin; border-style:solid">
+            @Html.DisplayFor(model => model.BanificiaryName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.BankName)
+        </dt>
+        <dd class="col-sm-10" style="background-color: lightyellow; border-color:lightgray; border-width:thin; border-style:solid">
+            @Html.DisplayFor(model => model.BankName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SWIFTCode)
+        </dt>
+        <dd class="col-sm-10" style="border-color:lightgray; border-width:thin; border-style:solid">
+            @Html.DisplayFor(model => model.SWIFTCode)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Amount)
+        </dt>
+        <dd class="col-sm-10" style="background-color: lightyellow;border-color:lightgray; border-width:thin; border-style:solid">
+            @Html.DisplayFor(model => model.Amount)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Date)
+        </dt>
+        <dd class="col-sm-10" style="border-color:lightgray; border-width:thin; border-style:solid">
+            @Html.DisplayFor(model => model.Date)
+        </dd>
+    </dl>
+</div>
+<div>
+
+    <a asp-action="Index" class="btn btn-success">Back to List</a>
+</div>
